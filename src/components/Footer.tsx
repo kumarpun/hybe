@@ -8,7 +8,7 @@ const Footer = () => {
         <Link href="/" className="font-semibold cursor-pointer">
           HYBE
         </Link>
-        <p className="mt-[32px] text-white text-opacity-50">
+        {/* <p className="mt-[32px] text-white text-opacity-50">
           Created by Shariar Sheikh,{" "}
           <Link
             href="https://shariar.vercel.app/"
@@ -17,7 +17,7 @@ const Footer = () => {
           >
             Website
           </Link>
-        </p>
+        </p> */}
       </div>
 
       <div className="w-full max-w-[162px]">
