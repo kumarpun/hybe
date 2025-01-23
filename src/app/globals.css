@@ -5,7 +5,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #ffffff;
-  background-color: black;
+  background-color: #ffffff;
 }
 
 .slider {
@@ -84,12 +84,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); /* Adjust the last value to control transparency */
+  background-color: #5270a2
 }
 
 .swiper-pagination-bullet-active {

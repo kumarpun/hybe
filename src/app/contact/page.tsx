@@ -6,6 +6,8 @@ import moment from "moment";
 import { FC, useEffect, useState } from "react";
 import bookATableImg from "../../assets/book-a-table.jpg";
 import Head from "next/head";
+import Image from "next/image";
+import addessImg from "../../assets/map.jpg";
 
 export default function BookATable() {
   const [currentTime, setCurrentTime] = useState("");
@@ -22,78 +24,56 @@ export default function BookATable() {
   return (
     <>
       <Head>
-        <title>Restaurant HYBE</title>
+        <title>Restaurant Hukka Bukka</title>
       </Head>
 
       <main className="min-h-screen relative overflow-hidden">
-        <section className="w-full flex flex-col lg:flex-row h-full min-h-screen">
-          <div
-            style={{
-              background: `url(https://images.unsplash.com/photo-1536822919364-de5612490f1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80)`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-            className="w-full lg:w-[50%] p-12 flex flex-col justify-between items-center min-h-screen h-full"
-          >
-            <Link href="/" className="font-semibold cursor-pointer">
-              HYBE
-            </Link>
-            <div className="text-center">
-              <h2 className="text-[#FACE8D] font-dancing text-[80px] leading-none">
-                Contact
-              </h2>
-              <h1 className="font-medium text-[80px] leading-none">
-                Get in Touch
-              </h1>
-            </div>
+      <NavigationFooter />
 
-            <NavigationFooter />
-          </div>
+          <div className="contact-bg">
+        <div
+          className="max-w-screen-xl py-14 px-6 sm:px-8 lg:px-16 mx-auto"
+          id="contact-us"
+        >
 
-          <div className="w-full lg:w-[50%] flex flex-col justify-center h-auto px-4 pb-4 lg:px-0 lg:pb-0">
-            <div className="max-w-[560px] h-auto mx-auto w-full">
-              <p className="text-white text-opacity-50 text-[20px] mt-[16px]">
-                Volutpat maecenas volutpat blandit aliquam etiam erat velit
-                scelerisque. Arcu non odio euismod lacinia. Tortor aliquam nulla
-                facilisi cras fermentum odio eu.
-              </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 px-8 py-12 my-12 bg-gradient-to-br from-gray-100 to-gray-300 rounded-lg shadow-lg">
+  <div className="space-y-6 text-gray-700">
+    <p className="text-lg sm:text-xl font-serif leading-relaxed">
+      Step into the warmth of our café or reach out to us—we’re just a call or email away. Our friendly team is eager to help make your experience delightful!
+    </p>
+    <p className="text-lg font-medium">
+      <strong className="text-indigo-500">E:</strong>{" "}
+      <a
+        href="mailto:hybe.inn@gmail.com"
+        className="hover:text-indigo-600 underline"
+      >
+        hybe.inn@gmail.com
+      </a>
+    </p>
+    <p className="text-lg font-medium">
+      <strong className="text-indigo-500">P:</strong> 
+      <span className="ml-1">9766639164</span>
+    </p>
+    <p className="text-lg font-medium">
+      <strong className="text-indigo-500">Location:</strong>{" "}
+      <span className="ml-1">Kalikanagar, Butwal</span>
+    </p>
+  </div>
 
-              <form
-                onSubmit={(event) => {
-                  event.preventDefault();
-                }}
-                className="mt-[48px]"
-              >
-                <h3 className="text-white text-opacity-50 text-[16px]">Name</h3>
-                <input
-                  type="text"
-                  className="h-[60px] bg-black mt-[16px] w-full px-[24px] py-[15px] border border-[#FFFFFF] border-opacity-50 rounded-[10px]"
-                  placeholder="Name"
-                />
+  <div className="relative w-full h-full">
+    <div className="overflow-hidden rounded-lg shadow-md">
+      <Image
+        src={addessImg}
+        alt="map"
+        className="w-full h-auto transition-transform duration-300 hover:scale-105"
+      />
+    </div>
+  </div>
+</div>
 
-                <h3 className="text-white text-opacity-50 mt-[48px] text-[16px]">
-                  Email
-                </h3>
-                <input
-                  type="text"
-                  className="h-[60px] bg-black mt-[16px] w-full px-[24px] py-[15px] border border-[#FFFFFF] border-opacity-50 rounded-[10px]"
-                  placeholder="Email"
-                />
-                <h3 className="text-white text-opacity-50 mt-[48px] text-[16px]">
-                  Message
-                </h3>
-                <textarea
-                  placeholder="Message"
-                  className="min-h-[120px] max-h-[200px] bg-black mt-[16px] w-full px-[24px] py-[15px] border border-[#FFFFFF] border-opacity-50 rounded-[10px]"
-                />
 
-                <button className="bg-[#F8D49E] active:scale-95 hover:bg-[#f4ca8a] duration-150 mt-[48px] w-full text-black text-[16px] uppercase flex items-center justify-center rounded-[500px] h-[60px]">
-                  Book A Table
-                </button>
-              </form>
-            </div>
-          </div>
-        </section>
+        </div>
+      </div>
       </main>
     </>
   );
